@@ -1,0 +1,342 @@
+/********************
+fonts
+********************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/********************
+general
+********************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden !important;
+  letter-spacing: -.2px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
+/********************
+text styles
+********************/
+.section-heading {
+  font-weight: 600;
+  font-size: 6rem;
+  width: 68%;
+  line-height: -4rem;
+
+  @media (max-width: 991.98px) {
+    font-size: 5rem;
+    text-align: center;
+    margin: 0 auto 5rem auto;
+    width: 85%;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 4rem;
+    width: 90%;
+  }
+}
+
+.color-black {
+  color: $color-black;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 3rem;
+
+  &.dark {
+    color: $color-para-dark;
+  }
+
+  &.white {
+    color: white;
+  }
+}
+
+/********************
+bootstrap
+********************/
+.container {
+  padding: 0;
+}
+
+/********************
+font awesome
+********************/
+.fad.fa-lightbulb-on,
+.fad.fa-search,
+.fad.fa-angle-double-down {
+  &::before {
+    opacity: var(--fa-primary-opacity, .5);
+  }
+
+  &::after {
+    opacity: var(--fa-secondary-opacity, 1);
+  }
+}
+
+/********************
+button
+********************/
+
+.button {
+  width: 27.1rem;
+  height: 6.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $golfi-green2;
+  @include animateIt;
+  letter-spacing: .1rem;
+  background-color: $golfi-light-green;
+  filter: drop-shadow(0px 30px 20px rgba(214, 255, 161, 0.4));
+  -webkit-filter: drop-shadow(0px 30px 20px rgba(214, 255, 161, 0.4));
+  -moz-filter: drop-shadow(0px 30px 20px rgba(214, 255, 161, 0.4));
+  i {
+    margin-left: 1rem;
+    @include animateIt;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $golfi-green2;
+    filter: drop-shadow(0px 30px 20px rgba(72, 85, 55, 0.4));
+    -webkit-filter: drop-shadow(0px 30px 20px rgba(72, 85, 55, 0.4));
+    -moz-filter: drop-shadow(0px 30px 20px rgba(72, 85, 55, 0.4));
+    color: white;
+    outline: 0;
+
+    i {
+      color: white;
+    }
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+
+    .button:nth-child(n+2) {
+      margin-left: 1.8rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    display: flex;
+    margin: 0 auto;
+
+    &__wrapper {
+      width: 100%;
+
+      .button:nth-child(n+2) {
+        margin: 1rem auto 0 auto;
+      }
+    }
+  }
+}
+
+.button-outline{
+  border: 2px solid $golfi-green2;
+  color: $golfi-green2;
+  background: none;
+}
+/********************
+social
+********************/
+.social {
+  ul {
+    li {
+      display: inline-block;
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 50%;
+
+      &:nth-child(n+2) {
+        margin-left: .4rem;
+      }
+
+      
+        background: $golfi-green1;
+        filter: $golfi-dark-drop-shadow;
+        -webkit-filter: $golfi-dark-drop-shadow;
+        -moz-filter: $golfi-dark-drop-shadow;
+        transform: var(--transform-fix);
+        backface-visibility: hidden;
+        perspective: 1000;
+      
+
+     
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+      }
+
+      background-size: 200% 200% !important;
+      background-position: center bottom !important;
+      @include animateIt;
+
+      &:hover {
+        background-position: center top !important;
+      }
+    }
+  }
+}
+
+/********************
+download buttons
+********************/
+.download-buttons {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24.4rem;
+    height: 8.1rem;
+    background-color: grey;
+    border-radius: 5rem;
+    @include animateIt;
+
+    i {
+      font-size: 3.4rem;
+      color: #4f5e4f;
+    }
+
+    .button-content {
+      margin-left: 1.3rem;
+      letter-spacing: .1rem;
+
+      h6 {
+        font-size: 1.2rem;
+        color: #4f5e4f;
+      }
+
+      span {
+        display: block;
+        font-size: 2rem;
+        color: #26362e;
+        margin-top: .2rem;
+        letter-spacing: initial;
+      }
+    }
+
+    &:last-child {
+      .button-content {
+        h6 {
+          color: #4f5e4f;
+        }
+      }
+    }
+
+    &.google-play {
+      background: #d6ffa1;
+
+      filter: drop-shadow(0px 30px 20px #d6ffa166);
+      -webkit-filter: drop-shadow(0px 30px 20px #d6ffa166);
+      -moz-filter: drop-shadow(0px 30px 20px #d6ffa166);
+      transform: var(--transform-fix);
+      backface-visibility: hidden;
+      perspective: 1000;
+    }
+
+    &.apple-store {
+      background: #d6ffa1;
+
+      filter: drop-shadow(0px 30px 20px #d6ffa166);
+      -webkit-filter: drop-shadow(0px 30px 20px #d6ffa166);
+      -moz-filter: drop-shadow(0px 30px 20px #d6ffa166);
+      transform: var(--transform-fix);
+      backface-visibility: hidden;
+      perspective: 1000;
+    }
+
+    background-size: 200% 200% !important;
+    background-position: center bottom !important;
+
+    &:hover {
+      background-position: center top !important;
+    }
+  }
+}
+
+/********************
+form
+********************/
+.comment_form {
+  width: 100%;
+  display: flex;
+
+  >div {
+    width: 50%;
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+
+  .input-field {
+    width: 100%;
+
+    &:nth-child(n+2) {
+      margin-top: 1rem;
+    }
+  }
+
+  textarea.input-field {
+    padding-top: 2.2rem;
+    height: 14rem;
+    border-radius: 3rem;
+    resize: none;
+  }
+
+  .button {
+    margin-top: .6rem;
+    width: 100%;
+  }
+
+  @media (max-width: 767.98px) {
+    display: block;
+
+    >div {
+      display: block;
+      width: 100%;
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+
+    textarea.input-field {
+      margin-top: 1rem;
+    }
+  }
+}

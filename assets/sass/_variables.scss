@@ -1,0 +1,28 @@
+/********************
+preloader
+********************/
+$golfi-green2: #26362e;
+$golfi-green1: #4f5e4f;
+$golfi-off-white: #f7f2ec;
+$color-black: #000000;
+$color-para-dark:$golfi-green2;
+$golfi-light-green: #d6ffa1;
+
+/********************
+section
+********************/
+$section-padding: 10rem;
+$section-padding-responsive: 6rem;
+
+/********************
+button
+********************/
+$button-color-blue: #26362e;
+$button-color-orange: #ffd588;
+
+$golfi-light-drop-shadow:  drop-shadow(0px 30px 20px #d6ffa166);
+$golfi-dark-drop-shadow:  drop-shadow(0px 30px 20px rgba(72, 85, 55, 0.4));
+
+:root {
+    --transform-fix: 'none';
+}
