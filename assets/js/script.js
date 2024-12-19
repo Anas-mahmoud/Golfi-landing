@@ -108,7 +108,7 @@ var screenshot = new Swiper('.screenshot-slider', {
     loop: true,
     slidesPerView: 4.75,
     centeredSlides: true,
-    spaceBetween: 30,
+    spaceBetween: 50,
     navigation: {
         nextEl: '.screenshot-nav-next',
         prevEl: '.screenshot-nav-prev',

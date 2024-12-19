@@ -1568,7 +1568,7 @@ hero
   }
   .hero .hero-img {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
   .hero .hero-img::before {
     transform: scale(0.8) translate(-50%, 0);
@@ -1581,8 +1581,9 @@ hero
     font-size: 5rem;
   }
   .hero .paragraph {
-    font-size: 1.8rem;
-    line-height: 3.4rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    padding-inline: 1rem;
   }
   .hero .download-buttons a {
     display: flex;
@@ -1604,6 +1605,7 @@ hero
   .hero .main-heading {
     font-size: 3rem;
     letter-spacing: normal;
+    padding-inline: 1rem;
   }
   .hero .col-lg-6 {
     height: auto;
@@ -1615,7 +1617,7 @@ hero
     width: 100% !important;
   }
   .hero .hero-img img {
-    width: 100% !important;
+    width: 70% !important;
     height: 50% !important;
     object-fit: cover !important;
   }
@@ -1623,8 +1625,8 @@ hero
     transform: scale(1) translate(-50%, 0) !important;
     left: 50% !important;
     top: -10% !important;
-    width: 40rem;
-    height: 40rem;
+    width: 30rem;
+    height: 30rem;
   }
 }
 
@@ -1644,6 +1646,7 @@ feature
 }
 .feature .row {
   justify-content: center;
+  margin-top: 2rem;
 }
 .feature .section-heading {
   margin-bottom: 5rem;
@@ -1954,6 +1957,8 @@ growth
   position: relative;
   border-radius: 2rem;
   padding: 3.7rem 6.2rem 2.5rem 4rem;
+  align-content: space-around;
+  height: 100%;
 }
 .growth__box .content h3 {
   font-size: 2.2rem;
@@ -1964,6 +1969,9 @@ growth
   transform: scale(1.2);
 }
 @media (min-width: 768px) {
+  .growth .row .growth__box {
+    height: 100%;
+  }
   .growth .row > div:nth-child(odd) .growth__box .content::before {
     content: "";
     width: 4.8rem;
@@ -2112,7 +2120,7 @@ step
   perspective: 1000;
 }
 .step__box .image img {
-  width: 100%;
+  width: 65%;
 }
 .step__box .content {
   margin-top: 4.5rem;
@@ -2146,7 +2154,6 @@ step
   }
   .step__box .image img {
     transform: scale(0.9);
-    width: auto;
     margin: 0 auto;
   }
   .step__box .content {
@@ -2331,7 +2338,7 @@ questions
   width: 100vw;
 }
 .questions__wrapper {
-  background-color: #f7f2ec;
+  background-color: #d6ffa1;
   padding: 10rem 0;
   width: calc(100% - 10rem);
   margin: 0 auto;
@@ -2421,7 +2428,7 @@ questions
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  background: #d6ffa1;
+  background: white;
   background-size: 200% 200%;
   background-position: left bottom;
   filter: drop-shadow(0px 30px 20px rgba(214, 255, 161, 0.4));
@@ -2488,7 +2495,6 @@ questions
     font-size: 1.8rem !important;
   }
   .questions-img img {
-    width: 50%;
     height: 50%;
     object-fit: cover;
   }
